@@ -2,29 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bing Daily Background</title>
+    <title>Jidro.Z</title>
     <style>
         body {
             margin: 0;
         }
-        #background {
+        background {
+            /* 设置背景图为Bing每日图片 */
+            background-image: url('https://www.bing.com/th?id=OHR.FutureForest_EN-US2447036766_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp');
+            /* 设置背景图全屏填充 */
             background-size: cover;
+            background-repeat: no-repeat;
             background-position: center center;
             /* 这里需要将高度设置为 100vh，以确保 div 占据整个屏幕 */
             height: 100vh;
         }
     </style>
 </head>
-<body>
-    <div id="background"></div>
-    <script>
-        fetch('https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1')
-            .then(response => response.json())
-            .then(data => {
-                const imageUrl = `https://www.bing.com/${data.images[0].url}`;
-                document.getElementById('background').style.backgroundImage = `url('${imageUrl}')`;
-            })
-            .catch(error => console.error(error));
-    </script>
-</body>
+  <body>
+    <!-- 网页内容 -->
+    <h1>Hello World!</h1>
+    <p>这是一段示例文本。</p>
+  </body>
 </html>
